@@ -1,7 +1,10 @@
 <?php
 
 if ( ! defined('DOCROOT'))
+{
 	exit('No direct script access allowed.');
+}
+
 
 \Foolz\Plugin\Event::forge('foolz\plugin\plugin.execute.foolz/foolz_external_links')
 	->setCall(function($result) {
@@ -79,6 +82,28 @@ if ( ! defined('DOCROOT'))
 						break;
 
 
+					case 'a':
+						// no break
+					case 'co':
+						// no break
+					case 'jp':
+						// no break
+					case 'm':
+						// no break
+					case 'q':
+						// no break
+					case 'sp':
+						// no break
+					case 'tg':
+						// no break
+					case 'tv':
+						// no break
+					case 'v':
+						// no break
+					case 'vg':
+						// no break
+					case 'wsg':
+						// no break
 					case 'dev':
 						// no break
 					case 'foolz':
