@@ -1,5 +1,5 @@
 {
-	"name": "foolz/foolfuuka-external-links",
+	"name": "foolz/foolfuuka-plugin-external-links",
 	"type": "foolz-foolfuuka-plugin",
 	"description": "This modifies the >>>/<location>/<query> hook to support additional websites.",
 	"version": "1.0.0",
