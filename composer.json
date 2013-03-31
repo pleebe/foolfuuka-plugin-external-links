@@ -1,7 +1,8 @@
 {
-	"name": "foolz/foolz_external_links",
-	"type": "foolz-plugin",
-	"description": "Modifies the external links hook to support additional websites. For foolz.us use only!",
+	"name": "foolz/foolfuuka-external-links",
+	"type": "foolz-foolfuuka-plugin",
+	"description": "This modifies the >>>/<location>/<query> hook to support additional websites.",
+	"version": "1.0.0",
 	"keywords": ["external links"],
 	"homepage": "http://www.foolz.us",
 	"license": "Apache-2.0",
@@ -16,9 +17,8 @@
 	},
 
 	"extra": {
-		"name": "Foolz™ External Links",
+		"name": "External Links",
 		"slug": "external_links",
-		"identifier": "fu",
 		"module": "foolfuuka"
 	}
 }
