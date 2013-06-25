@@ -41,13 +41,19 @@ class ExternalLinks
 				$href['attributes'] = ' data-function="youtube" data-video="'.$data->query.'"';
 				break;
 
-
+			case '3':
+				// no break
 			case 'ck':
+				// no break
+			case 'fa':
+				// no break
+			case 'ic':
 				// no break
 			case 'lit':
 				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
 				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
+
 			case 'cgl':
 				// no break
 			case 'mu':
@@ -55,17 +61,19 @@ class ExternalLinks
 			case 'soc':
 				// no break
 			case 'w':
-				$href['short_link'] = '//archive.rebeccablacktech.com/'.$data->shortname.'/';
-				$href['query_link'] = '//archive.rebeccablacktech.com/'.$data->shortname.'/post/'.$data->query.'/';
+				$href['short_link'] = '//rbt.asia/'.$data->shortname.'/';
+				$href['query_link'] = '//rbt.asia/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
+
 			case 'diy':
 				// no break
 			case 'g':
 				// no break
 			case 'sci':
-				$href['short_link'] = '//archive.installgentoo.net/'.$data->shortname.'/';
-				$href['query_link'] = '//archive.installgentoo.net/'.$data->shortname.'/post/'.$data->query.'/';
+				$href['short_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/';
+				$href['query_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
+
 			case 'an':
 				// no break
 			case 'fit':
@@ -82,6 +90,7 @@ class ExternalLinks
 				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
 				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
+
 			case 'c':
 				// no break
 			case 'int':
@@ -95,6 +104,39 @@ class ExternalLinks
 				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
+			case 'adv':
+				// no break
+			case 'asp':
+				// no break
+			case 'cm':
+				// no break
+			case 'i':
+				// no break
+			case 'lgbt':
+				// no break
+			case 'n':
+				// no break
+			case 'o':
+				// no break
+			case 'p':
+				// no break
+			case 's4s':
+				// no break
+			case 't':
+				// no break
+			case 'trv':
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+
+			case 'd':
+				// no break
+			case 'h':
+				// no break
+			case 'v':
+				$href['short_link'] = '//loveisover.me/'.$data->shortname.'/';
+				$href['query_link'] = '//loveisover.me/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
 
 			case 'a':
 				// no break
@@ -114,9 +156,9 @@ class ExternalLinks
 				// no break
 			case 'tv':
 				// no break
-			case 'v':
-				// no break
 			case 'vg':
+				// no break
+			case 'vp':
 				// no break
 			case 'vr':
 				// no break
@@ -129,8 +171,6 @@ class ExternalLinks
 				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
-			case 'h':
-				// no break
 			case 'u':
 				// no break
 			case 'kuku':
@@ -141,6 +181,10 @@ class ExternalLinks
 			case 'beta':
 				$href['short_link'] = '//beta.foolz.us/'.$data->shortname.'/';
 				$href['query_link'] = '//beta.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+			case 'blog':
+				$href['short_link'] = 'http://blog.foolz.us/';
+				$href['query_link'] = 'http://blog.foolz.us/'.$data->query.'/';
 				break;
 			case 'status':
 				$href['short_link'] = '//status.foolz.us/';
