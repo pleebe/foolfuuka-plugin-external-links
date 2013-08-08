@@ -11,6 +11,26 @@ class ExternalLinks
 
 		switch ($data->shortname)
 		{
+			case 'warosu':
+				$href['short_link'] = '//fuuka.warosu.org/jp/';
+				$href['query_link'] = '//fuuka.warosu.org/jp/post/'.$data->query.'/';
+				break;
+				
+			case 'rizon':
+				$href['short_link'] = '//qchat.rizon.net';
+				$href['query_link'] = '//qchat.rizon.net/?channels=#'.$data->query;
+				break;
+				
+			case 'irchighway':
+				$href['short_link'] = 'http://webchat.irchighway.net/';
+				$href['query_link'] = 'http://webchat.irchighway.net/?channels=#'.$data->query;
+				break;
+				
+			case 'siztra':
+				$href['short_link'] = '//qchat.rizon.net/?channels=#siztra~';
+				$href['query_link'] = '//qchat.rizon.net/?channels=#siztra~';
+				break;
+				
 			case '9fag':
 				$href['short_link'] = '//9gag.com/';
 				$href['query_link'] = '//9gag.com/gag/'.$data->query;
@@ -24,7 +44,7 @@ class ExternalLinks
 				$href['query_link'] = 'http://doushio.com/'.$data->shortname.'/'.$data->query;
 				break;
 			case 'reddit':
-				$href['short_link'] = 'http://reddit.com/'.$data->query.'/';
+				$href['short_link'] = 'http://reddit.com/'.$data->query;
 				$href['query_link'] = 'http://reddit.com/r/'.$data->query.'/';
 				break;
 			case 'teaparty':
@@ -42,137 +62,291 @@ class ExternalLinks
 				break;
 
 			case '3':
-				// no break
+				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'ck':
-				// no break
+				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'fa':
-				// no break
+				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'ic':
-				// no break
+				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+					
 			case 'lit':
 				$href['short_link'] = '//fuuka.warosu.org/'.$data->shortname.'/';
 				$href['query_link'] = '//fuuka.warosu.org/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
-
+				
 			case 'cgl':
-				// no break
-			case 'mu':
-				// no break
-			case 'soc':
-				// no break
-			case 'w':
-				$href['short_link'] = '//rbt.asia/'.$data->shortname.'/';
-				$href['query_link'] = '//rbt.asia/'.$data->shortname.'/post/'.$data->query.'/';
+				$href['short_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/';
+				$href['query_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/post/'.$data->query.'/';
 				break;
-
+				
+			case 'mu':
+				$href['short_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/';
+				$href['query_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
+			case 'soc':
+				$href['short_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/';
+				$href['query_link'] = '//archive.rebeccablacktech.com'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
+			case 'w':
+				$href['short_link'] = '//archive.nyafuu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.nyafuu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+			
+			case 'wg':
+				$href['short_link'] = '//archive.nyafuu.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.nyafuu.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'diy':
-				// no break
+				$href['short_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/';
+				$href['query_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'g':
-				// no break
+				$href['short_link'] = '//archive.rebeccablacktech.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.rebeccablacktech.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'sci':
 				$href['short_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/';
 				$href['query_link'] = 'https://archive.installgentoo.net/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
 			case 'an':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'fit':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'k':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'mlp':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'r9k':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'toy':
-				// no break
+				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
+				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'x':
 				$href['short_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/';
 				$href['query_link'] = 'http://archive.heinessen.com/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
 			case 'c':
-				// no break
+				$href['short_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'int':
-				// no break
+				$href['short_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'out':
-				// no break
+				$href['short_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'po':
-				// no break
+				$href['short_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'neet':
 				$href['short_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/';
 				$href['query_link'] = '//archive.thedarkcave.org/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
 			case 'adv':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'asp':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'cm':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'i':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'lgbt':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'n':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'o':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'p':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 's4s':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 't':
-				// no break
+				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'trv':
 				$href['short_link'] = '//archive.foolzashit.com/'.$data->shortname.'/';
 				$href['query_link'] = '//archive.foolzashit.com/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
+			case 'b':
+				$href['short_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/';
+				$href['query_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+
+			case 's':
+				$href['short_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/';
+				$href['query_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+
 			case 'd':
 				// no break
+				
 			case 'h':
-				// no break
+				$href['short_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/';
+				$href['query_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+
+			case 'hc':
+				$href['short_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/';
+				$href['query_link'] = 'http://fuuka.worldathleticproject.org/b/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'v':
-				$href['short_link'] = '//loveisover.me/'.$data->shortname.'/';
-				$href['query_link'] = '//loveisover.me/'.$data->shortname.'/post/'.$data->query.'/';
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
 			case 'a':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'co':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'gd':
 				// no break
+				
 			case 'jp':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'm':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'q':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'sp':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'tg':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'tv':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'vg':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'vp':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'vr':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'wsg':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'dev':
-				// no break
+				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+				
 			case 'foolz':
 				$href['short_link'] = '//archive.foolz.us/'.$data->shortname.'/';
 				$href['query_link'] = '//archive.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
 
 			case 'u':
-				// no break
+				$href['short_link'] = '//nsfw.foolz.us/'.$data->shortname.'/';
+				$href['query_link'] = '//nsfw.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
+				break;
+								
 			case 'kuku':
 				$href['short_link'] = '//nsfw.foolz.us/'.$data->shortname.'/';
 				$href['query_link'] = '//nsfw.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
@@ -182,10 +356,12 @@ class ExternalLinks
 				$href['short_link'] = '//beta.foolz.us/'.$data->shortname.'/';
 				$href['query_link'] = '//beta.foolz.us/'.$data->shortname.'/post/'.$data->query.'/';
 				break;
+				
 			case 'blog':
 				$href['short_link'] = 'http://blog.foolz.us/';
 				$href['query_link'] = 'http://blog.foolz.us/'.$data->query.'/';
 				break;
+				
 			case 'status':
 				$href['short_link'] = '//status.foolz.us/';
 				$href['query_link'] = '//status.foolz.us/service/foolz-archive/'.$data->query.'/';
