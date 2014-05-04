@@ -1,24 +1,27 @@
 {
-	"name": "foolz/foolfuuka-plugin-external-links",
-	"type": "foolz-foolfuuka-plugin",
-	"description": "This modifies the >>>/<location>/<query> hook to support additional websites.",
-	"version": "1.0.0",
-	"keywords": ["external links"],
-	"homepage": "http://www.foolz.us",
-	"license": "Apache-2.0",
-	"authors": [{"name": "foolz", "email": "support@foolz.us"}],
-	"support": {
-		"email": "support@foolz.us",
-		"irc": "irc://irc.irchighway.net/fooldriver"
-	},
-
-	"require" : {
-		"foolz/plugin": "dev"
-	},
-
-	"extra": {
-		"name": "External Links",
-		"slug": "external_links",
-		"module": "foolfuuka"
-	}
+    "name": "foolz/foolfuuka-plugin-external-links",
+    "type": "foolz-foolfuuka-plugin",
+    "description": "This modifies the >>>/{location}/{query} hook to support additional websites.",
+    "version": "1.0.0",
+    "keywords": ["external links"],
+    "homepage": "http://www.foolz.us",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "foolz",
+            "email": "support@foolz.us"
+        }
+    ],
+    "support": {
+        "email": "support@foolz.us",
+        "irc": "irc://irc.irchighway.net/fooldriver"
+    },
+    "require" : {
+        "foolz/plugin": "dev"
+    },
+    "extra": {
+        "name": "External Links",
+        "slug": "external_links",
+        "module": "foolfuuka"
+    }
 }
