@@ -10,6 +10,8 @@ class HHVM_ExLinks
     {
         Event::forge('Foolz\Plugin\Plugin::execute.foolz/foolfuuka-plugin-external-links')
             ->setCall(function ($result) {
+                /** @var Context $context */
+                $context = $result->getParam('context');
                 /** @var Autoloader $autoloader */
                 $autoloader = $context->getService('autoloader');
                 $autoloader->addClassMap([
