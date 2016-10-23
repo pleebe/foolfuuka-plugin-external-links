@@ -1,0 +1,154 @@
+diff --git a/assets/themes/foolz/foolfuuka-theme-foolfuuka/assets/board.js b/assets/themes/foolz/foolfuuka-theme-foolfuuka/assets/board.js
+index 1d85b4e..cb1c1a2 100644
+--- a/assets/themes/foolz/foolfuuka-theme-foolfuuka/assets/board.js
++++ b/assets/themes/foolz/foolfuuka-theme-foolfuuka/assets/board.js
+@@ -825,6 +825,59 @@ var bindFunctions = function()
+ 				backlink.html(data.formatted);
+ 				backlink.css('display', 'block');
+ 			}
++			else if (el.attr('data-ffapi') === 'true')
++			{
++				if (posts_being_fetched[el.data('board') + ':' + el.data('post')]) {
++					return false;
++				}
++
++				var baseuri = 'https://'+el.attr('data-external')+'/';
++				show_post_board = el.data('board');
++				show_post_num = el.data('post');
++
++				console.log(baseuri);
++				timeout = setTimeout(function() {
++					posts_being_fetched[el.data('board') + ':' + el.data('post')] = true;
++					var backlink_spin = el;
++					backlink_spin.spin('small');
++					backlink_jqxhr = jQuery.ajax({
++						url: baseuri + '_/api/chan/post/' ,
++						dataType: 'json',
++						type: 'GET',
++						data: {
++							board: el.data('board'),
++							num: el.data('post'),
++							theme: 'foolfuuka/foolfuuka-theme-foolfuuka'
++						},
++						success: function(data){
++							backlink_spin.spin(false);
++							if (typeof data.error !== "undefined")
++							{
++								backend_vars.loaded_posts[el.data('board') + ':' + el.data('post')] = false;
++								shakeBacklink(el);
++								return false;
++							}
++							backend_vars.loaded_posts[el.data('board') + ':' + el.data('post')] = data;
++
++							// avoid showing the post if the mouse is not there anymore
++							if (show_post_board === el.data('board') && show_post_num === el.data('post')) {
++								backlink.html(data.formatted);
++								backlink.find("time").localize('ddd dd mmm yyyy HH:MM:ss');
++								backlink.css('display', 'block');
++								showBacklink(backlink, pos, height, width);
++							}
++						},
++						error: function() {
++							backlink_spin.spin(false);
++							shakeBacklink(el);
++						},
++						complete: function() {
++							posts_being_fetched[el.data('board') + ':' + el.data('post')] = false;
++						}
++					});
++					return false;
++				}, 50);
++			}
+ 			else
+ 			{
+ 				show_post_board = el.data('board');
+diff --git a/assets/themes/foolz/foolfuuka-theme-foolfuuka/composer.json b/assets/themes/foolz/foolfuuka-theme-foolfuuka/composer.json
+index b11b2a3..c80fe4b 100644
+--- a/assets/themes/foolz/foolfuuka-theme-foolfuuka/composer.json
++++ b/assets/themes/foolz/foolfuuka-theme-foolfuuka/composer.json
+@@ -2,7 +2,7 @@
+   "name": "foolz/foolfuuka-theme-foolfuuka",
+   "type": "foolz-foolfuuka-theme",
+   "description": "The default FoolFuuka theme.",
+-  "version": "1.2.10",
++  "version": "1.2.11",
+   "keywords": [
+     "theme",
+     "default",
+diff --git a/assets/themes/foolz/foolfuuka-theme-mobile/assets/board.js b/assets/themes/foolz/foolfuuka-theme-mobile/assets/board.js
+index 287ed2e..e738cfa 100644
+--- a/assets/themes/foolz/foolfuuka-theme-mobile/assets/board.js
++++ b/assets/themes/foolz/foolfuuka-theme-mobile/assets/board.js
+@@ -834,6 +834,59 @@ var bindFunctions = function()
+ 				backlink.html(data.formatted);
+ 				backlink.css('display', 'block');
+ 			}
++			else if (el.attr('data-ffapi') === 'true')
++			{
++				if (posts_being_fetched[el.data('board') + ':' + el.data('post')]) {
++					return false;
++				}
++
++				var baseuri = 'https://'+el.attr('data-external')+'/';
++				show_post_board = el.data('board');
++				show_post_num = el.data('post');
++
++				console.log(baseuri);
++				timeout = setTimeout(function() {
++					posts_being_fetched[el.data('board') + ':' + el.data('post')] = true;
++					var backlink_spin = el;
++					backlink_spin.spin('small');
++					backlink_jqxhr = jQuery.ajax({
++						url: baseuri + '_/api/chan/post/' ,
++						dataType: 'json',
++						type: 'GET',
++						data: {
++							board: el.data('board'),
++							num: el.data('post'),
++							theme: 'foolfuuka/foolfuuka-theme-foolfuuka'
++						},
++						success: function(data){
++							backlink_spin.spin(false);
++							if (typeof data.error !== "undefined")
++							{
++								backend_vars.loaded_posts[el.data('board') + ':' + el.data('post')] = false;
++								shakeBacklink(el);
++								return false;
++							}
++							backend_vars.loaded_posts[el.data('board') + ':' + el.data('post')] = data;
++
++							// avoid showing the post if the mouse is not there anymore
++							if (show_post_board === el.data('board') && show_post_num === el.data('post')) {
++								backlink.html(data.formatted);
++								backlink.find("time").localize('ddd dd mmm yyyy HH:MM:ss');
++								backlink.css('display', 'block');
++								showBacklink(backlink, pos, height, width);
++							}
++						},
++						error: function() {
++							backlink_spin.spin(false);
++							shakeBacklink(el);
++						},
++						complete: function() {
++							posts_being_fetched[el.data('board') + ':' + el.data('post')] = false;
++						}
++					});
++					return false;
++				}, 50);
++			}
+ 			else
+ 			{
+ 				show_post_board = el.data('board');
+diff --git a/assets/themes/foolz/foolfuuka-theme-mobile/composer.json b/assets/themes/foolz/foolfuuka-theme-mobile/composer.json
+index 4870b91..a119e36 100644
+--- a/assets/themes/foolz/foolfuuka-theme-mobile/composer.json
++++ b/assets/themes/foolz/foolfuuka-theme-mobile/composer.json
+@@ -2,7 +2,7 @@
+   "name": "foolz/foolfuuka-theme-mobile",
+   "type": "foolz-foolfuuka-theme",
+   "description": "Mobile FoolFuuka theme.",
+-  "version": "0.0.9",
++  "version": "0.0.10",
+   "keywords": [
+     "theme",
+     "default",
